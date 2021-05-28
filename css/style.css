@@ -328,6 +328,7 @@ body {
   font-weight: var(--font-weight);
   line-height: 1;
   color: var(--color);
+  background-color: #e5e5e5;
   min-width: var(--min-width)
 }
 input,
@@ -427,6 +428,7 @@ h6 {
 .main__wrapper {
   display: flex;
   overflow: hidden;
+  background: #fff;
   box-shadow: 0 15px 65px #c7c6c6
 }
 @media only screen and (max-width: 1280px) {
@@ -449,6 +451,7 @@ h6 {
 @media only screen and (max-width: 1280px) {
   .main__row {
     flex-direction: row;
+    margin: 0 0 76px;
     background: transparent
   }
 }
@@ -571,16 +574,24 @@ h6 {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
-  padding: 32px 0 60px 0
+  padding: 48px 0 60px
 }
 @media only screen and (max-width: 768px) {
   .main__wrap-message {
-    padding: 79px 20px 40px 24px
+    padding: 0 20px 40px 24px
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) and (max-width: 576px) {
   .main__wrap-message {
-    padding: 79px 20px 13px 24px
+    padding: 0 17.6px 16px 24px
+  }
+}
+.main__inner {
+  width: 50%
+}
+@media only screen and (max-width: 1280px) {
+  .main__inner {
+    width: 100%
   }
 }
 .main__subtitle {
@@ -588,13 +599,21 @@ h6 {
   line-height: 1.2;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 83px;
+  padding: 34px 0;
   color: var(--secondary-color);
-  text-align: center
+  text-align: center;
+  background-color: #f8f8f8
+}
+@media only screen and (max-width: 1280px) {
+  .main__subtitle {
+    margin-bottom: 29px;
+    padding: 0;
+    background-color: transparent
+  }
 }
 @media only screen and (max-width: 768px) {
   .main__subtitle {
-    margin-bottom: 29px
+    background-color: transparent
   }
 }
 .main__subtitle--block {
@@ -624,6 +643,11 @@ h6 {
   border: 1px solid #e4e4e4;
   border-radius: 5px
 }
+@media only screen and (max-width: 576px) {
+  .main__input {
+    padding: 16px 11px 16px
+  }
+}
 .main__input::placeholder {
   font-size: 14px;
   line-height: 1.2;
@@ -641,7 +665,7 @@ h6 {
 }
 @media only screen and (max-width: 576px) {
   .main__wrap-input {
-    margin: 0 0 20px
+    margin: 0 0 30px
   }
 }
 .main__wrap-input .main__input {
@@ -671,7 +695,8 @@ h6 {
   align-items: center;
   justify-content: space-between;
   width: 160px;
-  margin: 0 auto
+  margin: 0 auto;
+  background-color: #f8f8f8
 }
 @media only screen and (max-width: 576px) {
   .main__Secure {
