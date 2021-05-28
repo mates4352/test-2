@@ -1,19 +1,17 @@
-$xll: 1440px;
-$xl: 1100px;
+$xl: 1280px;
 $lg: 992px;
 $md: 768px;
 $sm: 576px;
 $xs: 320px;
 
 :root {
-   --font-family: "Sfuid";
-   --font-family-secondary: "Sfuid";
-   --font-weight: 400;
+   --font-family: "Montserrat";
+   --font-weight: 600;
    --min-width: 320px;
 }
 
 :root {
    --color: #000;
-   --secondary-color: #000;
-   --base-color: #000;
+   --base-color: #428A60;
+   --secondary-color:#212121;
 }

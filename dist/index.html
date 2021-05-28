@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
    <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,28 +9,44 @@
    <title>title</title>
 </head>
 
+
 <body>
+
    <section class="main">
    <div class="container">
       <div class="main__wrapper">
 
-         <div class="main__img">
+         <div class="main__row">
+            <h1 class="main__title text">Reduslim</h1>
 
-            <picture>
-               <source type="image/webp" data-srcset="../assets/images/main.webp" />
-               <img class="lazy" alt="" data-src="../assets/images/main.png" />
+            <picture class="main__wrap-img">
+               <source type="image/webp" srcset="./assets/images/main/reduslim.webp" />
+               <img class="main_img" alt="" src="./assets/images/main/reduslim.png" />
             </picture>
+
+            <abbr class="main__abbr text">ECO</abbr>
 
          </div>
 
-         <div></div>
+         <div class="main__wrap-message">
+            <h2 class="main__subtitle"><span class="main__subtitle--block">Сделай шаг</span> к выздоровлению</h2>
+
+            <label class="main__label" for="inputName">Ваше <span class="main__label--green">имя</span></label>
+            <input class="main__input" type="text" id="inputName" placeholder="Алексей">
+
+            <label class="main__label" for="inputTel">Ваш <span class="main__label--green">телефон</span></label>
+            <input class="main__input" class="main__label" type="text" id="inputTel" placeholder="+7 (123) 456 78-90">
+
+            <button class="btn">Заказать</button>
+         </div>
+
 
       </div>
    </div>
 </section>
 
 
-
    <script src="./js/main.js"></script>
+
 </body>
 </html>
