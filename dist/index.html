@@ -28,27 +28,31 @@
 
          </div>
 
-         <div class="main__wrap-message">
+         <div class="main__inner">
             <h2 class="main__subtitle"><span class="main__subtitle--block">Сделай шаг</span> к выздоровлению</h2>
 
-            <label class="main__label" for="inputName">Ваше <span class="main__label--green">имя</span></label>
-            <input class="main__input" type="text" id="inputName" placeholder="Алексей">
+            <div class="main__wrap-message">
+
+               <label class="main__label" for="inputName">Ваше <span class="main__label--green">имя</span></label>
+               <input class="main__input" type="text" id="inputName" placeholder="Алексей">
 
 
-            <label class="main__label" for="inputTel">Ваш <span class="main__label--green">телефон</span></label>
+               <label class="main__label" for="inputTel">Ваш <span class="main__label--green">телефон</span></label>
+               <div class="main__wrap-input">
+                  <input class="main__input tel" class="main__label" type="tel" id="inputTel"
+                     placeholder="+7 (123) 456 78-90">
+                  <div class="main__lang"></div>
+               </div>
 
-            <div class="main__wrap-input">
-               <input class="main__input tel" class="main__label" type="tel" id="inputTel" placeholder="+7 (123) 456 78-90">
-               <div class="main__lang"></div>
-            </div>
 
+               <button class="btn">Заказать</button>
 
-            <button class="btn">Заказать</button>
-
-            <div class="main__Secure">
-               <span class="main__Trusted text">Trusted</span>
+               <div class="main__Secure">
+                  <span class="main__Trusted text">Trusted</span>
                   <img class="main__Secure-img" alt="lock" src="./../../assets/images/main/lock.svg" />
-               <span class="main__secure-text text">Secure</span>
+                  <span class="main__secure-text text">Secure</span>
+               </div>
+
             </div>
          </div>
 
