@@ -35,7 +35,8 @@ export const fontsFile = (params) => {
                c_fontname = fontname;
             }
          }
-      },params())
+      })
    }
+   params()
 }
 

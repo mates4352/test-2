@@ -2,4 +2,19 @@
    max-width: 1280px;
    margin: 0 auto;
    padding: 0 80px;
+
+   @include media(max,$xl) {
+      max-width: $lg;
+      padding: 0 50px;
+
+      @include media(max,$lg) {
+         max-width: $md;
+         padding: 0 30px;
+
+         @include media(max,$md) {
+            max-width: $sm;
+            padding: 0;
+         }
+      }
+   }
 }

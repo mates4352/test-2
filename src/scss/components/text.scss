@@ -1,4 +1,4 @@
 .text {
-   @include font(18px,1.2,700);
-   color: #fff;
+   @include font(14px,1.2,800);
+   color: var(--secondary-color);
 }
