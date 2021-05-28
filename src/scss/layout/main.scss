@@ -7,6 +7,7 @@
 
    &__wrapper {
       display: flex;
+      overflow: hidden;
       box-shadow: 0 15px 65px #c7c6c6;
 
       @include media(max,$xl) {
@@ -23,7 +24,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 30px 40px 35px 40px;
+      padding: 40px 40px 35px 40px;
       background: linear-gradient(180deg, #428a60 0%, #35734f 100%);
       border-radius: 1px;
 
@@ -36,6 +37,28 @@
          width: 100%;
          height: 234px;
          padding: 40px 20px 0;
+      }
+
+      &::before {
+         @include wh(1040px,832px);
+         position: absolute;
+         top: -35%;
+         left: 42%;
+         z-index: 0;
+         background-color: transparent;
+         border: 20px solid var(--base-color);
+         border-radius: 50%;
+         content: '';
+
+         @include media(max,$xl) {
+            display: none;
+         }
+
+         @include media(max,$md) {
+            @include wh(202px);
+            top: -40%;
+            left: 1%;
+         }
       }
    }
 
@@ -66,14 +89,20 @@
       }
 
       &::before {
-         @include wh(415px);
+         @include wh(398px);
          position: absolute;
-         top: -50%;
-         left: -1%;
+         top: -56%;
+         left: -7%;
          z-index: -1;
-         background-color: #428a60;
+         background-color: var(--base-color);
          border-radius: 50%;
          content: '';
+
+         @include media(max,$xl) {
+            @include wh(415px);
+            top: -50%;
+            left: 1%;
+         }
 
          @include media(max,$md) {
             @include wh(202px);
@@ -117,11 +146,17 @@
    // .main__wrap-message
 
    &__wrap-message {
+      z-index: 100;
+      width: 100%;
       max-width: 320px;
       margin: 0 auto;
       padding: 32px 0 60px 0;
 
       @include media(max,$md) {
+         padding: 79px 20px 40px 24px;
+      }
+
+      @include media(max,$sm) {
          padding: 79px 20px 13px 24px;
       }
    }
@@ -164,16 +199,12 @@
       width: 100%;
       max-width: 320px;
       height: 50px;
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
       padding: 16px 20px 16px;
       color: var(--secondary-color);
       background: #f8f8f8;
       border: 1px solid #e4e4e4;
       border-radius: 5px;
-
-      &:nth-of-type( 2 ) {
-         margin-bottom: 27px;
-      }
 
       &::placeholder {
          @include font(14px,1.2,false);
@@ -184,6 +215,36 @@
       &:focus::placeholder,
       &:hover::placeholder {
          transform: scale(0);
+      }
+   }
+
+   // .main__wrap-input
+
+   &__wrap-input {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 38px;
+
+      @include media(max,$sm) {
+         margin: 0 0 20px;
+      }
+
+      .main__input {
+         width: 184px;
+         margin: 0;
+
+         @include media(max,$md) {
+            width: 174px;
+         }
+      }
+   }
+
+   &__lang {
+      @include wh(116px,50px);
+      border: 1px solid #000;
+
+      @include media(max,$md) {
+         width: 96px;
       }
    }
 
@@ -225,3 +286,5 @@
 
    // }
 }
+
+
