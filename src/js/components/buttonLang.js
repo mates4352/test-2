@@ -11,14 +11,14 @@ const buttonLang = () => {
          subtitle: '<span class="main__subtitle--block">Take a step</span> towards recovery',
          labelName: 'Your <span class="main__label--green" >name</span>',
          labelTel: 'Your phone <span class="main__label--green" >number</span>',
-         btn: 'To order',
+         btn: '<span class="main__btn--arrow">To order</span>',
       },
 
       ru: {
          subtitle: '<span class="main__subtitle--block">Сделай шаг</span> к выздоровлению',
          labelName: 'Ваше <span class="main__label--green" >имя</span>',
          labelTel: 'Ваш <span class="main__label--green" >телефон</span>',
-         btn: 'Заказать',
+         btn: '<span class="main__btn--arrow">Заказать</span>',
       }
 
    }
