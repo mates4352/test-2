@@ -378,15 +378,11 @@ h6 {
   width: 100%;
   height: 42px;
   color: #fff;
+  text-indent: -31px;
   background: var(--base-color);
   border: none;
   border-radius: 5px;
   transition: color 500ms ease,background 500ms ease
-}
-@media only screen and (max-width: 576px) {
-  .btn {
-    margin-bottom: 40px
-  }
 }
 .btn:focus,
 .btn:hover {
@@ -444,7 +440,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px 40px 35px 40px;
+  padding: 40px 40px 37px 40px;
   background: linear-gradient(180deg, #428a60 0%, #35734f 100%);
   border-radius: 1px
 }
@@ -458,6 +454,7 @@ h6 {
 @media only screen and (max-width: 768px) {
   .main__row {
     width: 100%;
+    max-width: 320px;
     height: 234px;
     padding: 40px 20px 0
   }
@@ -570,11 +567,10 @@ h6 {
   }
 }
 .main__wrap-message {
-  z-index: 100;
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
-  padding: 48px 0 60px
+  padding: 54px 0 60px
 }
 @media only screen and (max-width: 768px) {
   .main__wrap-message {
@@ -583,10 +579,11 @@ h6 {
 }
 @media only screen and (max-width: 768px) and (max-width: 576px) {
   .main__wrap-message {
-    padding: 0 17.6px 16px 24px
+    padding: 0 17.6px 16px 26px
   }
 }
 .main__inner {
+  z-index: 100;
   width: 50%
 }
 @media only screen and (max-width: 1280px) {
@@ -599,21 +596,23 @@ h6 {
   line-height: 1.2;
   font-weight: 800;
   text-align: center;
-  padding: 34px 0;
+  padding: 30px 0;
   color: var(--secondary-color);
   text-align: center;
   background-color: #f8f8f8
 }
 @media only screen and (max-width: 1280px) {
   .main__subtitle {
-    margin-bottom: 29px;
+    margin: 0 0 29px 0;
     padding: 0;
+    line-height: 1.27;
     background-color: transparent
   }
 }
 @media only screen and (max-width: 768px) {
   .main__subtitle {
-    background-color: transparent
+    max-width: 280px;
+    margin: 0 auto 29px auto
   }
 }
 .main__subtitle--block {
@@ -665,7 +664,7 @@ h6 {
 }
 @media only screen and (max-width: 576px) {
   .main__wrap-input {
-    margin: 0 0 30px
+    margin: 0 0 28px
   }
 }
 .main__wrap-input .main__input {
@@ -677,15 +676,90 @@ h6 {
     width: 174px
   }
 }
+.main__wrap-lang {
+  position: relative
+}
 .main__lang {
   width: 116px;
   height: 50px;
-  border: 1px solid #000
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border: 1px solid #e4e4e4
 }
 @media only screen and (max-width: 768px) {
   .main__lang {
-    width: 96px
+    width: 96px;
+    padding: 16px 10px
   }
+}
+.main__lang:focus,
+.main__lang:hover {
+  background-color: rgba(153, 153, 153, 0.5)
+}
+.main__lang::before {
+  width: 8px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  background: url("../assets/images/main/mark.svg") no-repeat center center/cover;
+  transform: translateY(-50%);
+  content: ''
+}
+@media only screen and (max-width: 768px) {
+  .main__lang::before {
+    right: 5px
+  }
+}
+.main__lang-ru {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  margin: 0 10px 0 0;
+  color: var(--secondary-color)
+}
+.main__accordion {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: transparent;
+  border: 1px solid #e4e4e4;
+  visibility: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: background-color 500ms ease,opacity 500ms ease,visibility 500ms ease
+}
+.main__accordion:focus,
+.main__accordion:hover {
+  background-color: rgba(153, 153, 153, 0.5)
+}
+.main__accordion.active {
+  visibility: visible;
+  opacity: 1
+}
+@media only screen and (max-width: 768px) {
+  .main__btn {
+    margin-bottom: 38px
+  }
+}
+.main__btn--arrow {
+  position: relative
+}
+.main__btn--arrow::before {
+  width: 15px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: -26px;
+  background: url("../assets/images/main/arrow.svg") no-repeat center center/cover;
+  transform: translateY(-50%);
+  content: ''
 }
 .main__label--green {
   color: var(--base-color)
@@ -698,7 +772,7 @@ h6 {
   margin: 0 auto;
   background-color: #f8f8f8
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .main__Secure {
     display: flex
   }
