@@ -655,8 +655,7 @@ h6 {
   color: var(--border-color);
   transition: transform 500ms ease
 }
-.main__input:focus::placeholder,
-.main__input:hover::placeholder {
+.main__input:focus::placeholder {
   transform: scale(0)
 }
 .main__wrap-input {
@@ -753,7 +752,9 @@ h6 {
   }
 }
 .main__btn--arrow {
-  position: relative
+  position: relative;
+  top: 0;
+  left: 0
 }
 .main__btn--arrow::before {
   width: 15px;
