@@ -1,8 +1,8 @@
-$xl: 1280px;
-$lg: 992px;
-$md: 768px;
-$sm: 576px;
-$xs: 320px;
+$xl: 1280px - 0.2px;
+$lg: 992px - 0.2px;
+$md: 768px - 0.2px;
+$sm: 576px - 0.2px;
+$xs: 320px - 0.2px;
 
 :root {
    --font-family: "Montserrat";

@@ -50,7 +50,6 @@ const buttonLang = () => {
             key.forEach((element) => {
 
                const value = element.getAttribute('data-key')
-               console.log(value);
                element.innerHTML = lang.ea[value]
 
             });
@@ -70,7 +69,6 @@ const buttonLang = () => {
          key.forEach((element) => {
 
             const value = element.getAttribute('data-key')
-            console.log(value);
             element.innerHTML = lang.ru[value]
 
          });

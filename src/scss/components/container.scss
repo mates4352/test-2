@@ -3,8 +3,7 @@
    margin: 0 auto;
    padding: 0 80px;
 
-   @include media(max,$xl) {
-      max-width: $lg;
+   @include media(max,1240px) {
       padding: 0 50px;
 
       @include media(max,$lg) {

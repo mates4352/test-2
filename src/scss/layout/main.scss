@@ -1,6 +1,5 @@
 
 .main {
-
    padding: 75px 0;
 
    // .main__wrapper
@@ -11,7 +10,7 @@
       background: #fff;
       box-shadow: 0 15px 65px #c7c6c6;
 
-      @include media(max,$xl) {
+      @include media(max,$lg) {
          flex-direction: column;
          align-items: center;
       }
@@ -20,26 +19,29 @@
    // .main__row
 
    &__row {
-      @include wh(560px,500px);
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: 50%;
+      min-height: 500px;
       padding: 40px 40px 37px 40px;
       background: linear-gradient(180deg, #428a60 0%, #35734f 100%);
       border-radius: 1px;
 
-      @include media(max,$xl) {
+      @include media(max,$lg) {
          flex-direction: row;
-         margin: 0 0 76px;
-         background: transparent;
-      }
-
-      @include media(max,$md) {
-         width: 100%;
-         max-width: 320px;
-         height: 234px;
+         min-height: 400px;
+         margin: 0 0 70px;
          padding: 40px 20px 0;
+         background: transparent;
+
+         @include media(max,$md) {
+            width: 100%;
+            max-width: 320px;
+            min-height: 234px;
+            margin: 0 0 76px;
+         }
       }
 
       &::before {
@@ -53,7 +55,7 @@
          border-radius: 50%;
          content: '';
 
-         @include media(max,$xl) {
+         @include media(max,$lg) {
             display: none;
          }
 
@@ -72,7 +74,7 @@
       margin: 0;
       color: #fff;
 
-      @include media(max,$xl) {
+      @include media(max,$lg) {
          color: var(--secondary-color);
       }
    }
@@ -84,6 +86,10 @@
       top: 68%;
       left: 10%;
       transform: translateY(-50%);
+
+      @include media(max,$lg) {
+         top: 70%;
+      }
 
       @include media(max,$md) {
          top: 50%;
@@ -101,16 +107,20 @@
          border-radius: 50%;
          content: '';
 
-         @include media(max,$xl) {
-            @include wh(415px);
-            top: -50%;
-            left: 1%;
-         }
+         @include media(max,1120px) {
+            top: -60%;
 
-         @include media(max,$md) {
-            @include wh(202px);
-            top: -40%;
-            left: 1%;
+            @include media(max,$lg) {
+               @include wh(350px);
+               top: -50%;
+               left: -9%;
+
+               @include media(max,$md) {
+                  @include wh(202px);
+                  top: -40%;
+                  left: 1%;
+               }
+            }
          }
       }
 
@@ -130,8 +140,16 @@
    &_img {
       @include wh(465px,255px);
 
-      @include media(max,$md) {
-         @include wh(223px,122px);
+      @include media(max,1120px) {
+         @include wh(400px,255px);
+
+         @include media(max,$lg) {
+            @include wh(355px,200px);
+
+            @include media(max,$md) {
+               @include wh(223px,122px);
+            }
+         }
       }
    }
 
@@ -141,7 +159,7 @@
       @include font(18px,1,700);
       color: #fff;
 
-      @include media(max,$xl) {
+      @include media(max,$lg) {
          color: var(--secondary-color);
       }
    }
@@ -152,13 +170,20 @@
       width: 100%;
       max-width: 320px;
       margin: 0 auto;
-      padding: 54px 0 60px;
+      padding: 55px 0 60px;
 
-      @include media(max,$md) {
-         padding: 0 20px 40px 24px;
+      @include media(max,$lg) {
+         max-width: 768px;
+         padding: 0 50px 60px;
 
-         @include media(max,$sm) {
-            padding: 0 17.6px 16px 26px;
+         @include media(max,$md) {
+            max-width: 576px;
+            padding: 0 20px 40px 24px;
+
+            @include media(max,$sm) {
+               max-width: 320px;
+               padding: 0 17.6px 16px 26px;
+            }
          }
       }
    }
@@ -169,7 +194,7 @@
       z-index: 100;
       width: 50%;
 
-      @include media(max,$xl) {
+      @include media(max,$lg) {
          width: 100%;
       }
    }
@@ -183,7 +208,7 @@
       text-align: center;
       background-color: var(--background-color);
 
-      @include media(max,$xl) {
+      @include media(max,$lg) {
          margin: 0 0 29px 0;
          padding: 0;
          line-height: 1.27;
@@ -219,7 +244,6 @@
 
    &__input {
       width: 100%;
-      max-width: 320px;
       height: 50px;
       margin: 0 0 20px 0;
       padding: 16px 20px 16px;
@@ -258,8 +282,12 @@
          width: 184px;
          margin: 0;
 
-         @include media(max,$md) {
-            width: 174px;
+         @include media(max,$lg) {
+            width: 80%;
+
+            @include media(max,$sm) {
+               width: 174px;
+            }
          }
       }
    }

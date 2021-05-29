@@ -396,21 +396,20 @@ h6 {
   margin: 0 auto;
   padding: 0 80px
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1240px) {
   .container {
-    max-width: 992px;
     padding: 0 50px
   }
 }
-@media only screen and (max-width: 1280px) and (max-width: 992px) {
+@media only screen and (max-width: 1240px) and (max-width: 991.8px) {
   .container {
-    max-width: 768px;
+    max-width: 767.8px;
     padding: 0 30px
   }
 }
-@media only screen and (max-width: 1280px) and (max-width: 992px) and (max-width: 768px) {
+@media only screen and (max-width: 1240px) and (max-width: 991.8px) and (max-width: 767.8px) {
   .container {
-    max-width: 576px;
+    max-width: 575.8px;
     padding: 0
   }
 }
@@ -429,36 +428,38 @@ h6 {
   background: #fff;
   box-shadow: 0 15px 65px #c7c6c6
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 991.8px) {
   .main__wrapper {
     flex-direction: column;
     align-items: center
   }
 }
 .main__row {
-  width: 560px;
-  height: 500px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 50%;
+  min-height: 500px;
   padding: 40px 40px 37px 40px;
   background: linear-gradient(180deg, #428a60 0%, #35734f 100%);
   border-radius: 1px
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 991.8px) {
   .main__row {
     flex-direction: row;
-    margin: 0 0 76px;
+    min-height: 400px;
+    margin: 0 0 70px;
+    padding: 40px 20px 0;
     background: transparent
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991.8px) and (max-width: 767.8px) {
   .main__row {
     width: 100%;
     max-width: 320px;
-    height: 234px;
-    padding: 40px 20px 0
+    min-height: 234px;
+    margin: 0 0 76px
   }
 }
 .main__row::before {
@@ -473,12 +474,12 @@ h6 {
   border-radius: 50%;
   content: ''
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 991.8px) {
   .main__row::before {
     display: none
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767.8px) {
   .main__row::before {
     width: 202px;
     height: 202px;
@@ -493,7 +494,7 @@ h6 {
   margin: 0;
   color: #fff
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 991.8px) {
   .main__title {
     color: var(--secondary-color)
   }
@@ -504,7 +505,12 @@ h6 {
   left: 10%;
   transform: translateY(-50%)
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991.8px) {
+  .main__wrap-img {
+    top: 70%
+  }
+}
+@media only screen and (max-width: 767.8px) {
   .main__wrap-img {
     top: 50%;
     left: 52%;
@@ -522,15 +528,20 @@ h6 {
   border-radius: 50%;
   content: ''
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1120px) {
   .main__wrap-img::before {
-    width: 415px;
-    height: 415px;
-    top: -50%;
-    left: 1%
+    top: -60%
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1120px) and (max-width: 991.8px) {
+  .main__wrap-img::before {
+    width: 350px;
+    height: 350px;
+    top: -50%;
+    left: -9%
+  }
+}
+@media only screen and (max-width: 1120px) and (max-width: 991.8px) and (max-width: 767.8px) {
   .main__wrap-img::before {
     width: 202px;
     height: 202px;
@@ -551,7 +562,19 @@ h6 {
   width: 465px;
   height: 255px
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1120px) {
+  .main_img {
+    width: 400px;
+    height: 255px
+  }
+}
+@media only screen and (max-width: 1120px) and (max-width: 991.8px) {
+  .main_img {
+    width: 355px;
+    height: 200px
+  }
+}
+@media only screen and (max-width: 1120px) and (max-width: 991.8px) and (max-width: 767.8px) {
   .main_img {
     width: 223px;
     height: 122px
@@ -563,7 +586,7 @@ h6 {
   font-weight: 700;
   color: #fff
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 991.8px) {
   .main__abbr {
     color: var(--secondary-color)
   }
@@ -572,15 +595,23 @@ h6 {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
-  padding: 54px 0 60px
+  padding: 55px 0 60px
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991.8px) {
   .main__wrap-message {
+    max-width: 768px;
+    padding: 0 50px 60px
+  }
+}
+@media only screen and (max-width: 991.8px) and (max-width: 767.8px) {
+  .main__wrap-message {
+    max-width: 576px;
     padding: 0 20px 40px 24px
   }
 }
-@media only screen and (max-width: 768px) and (max-width: 576px) {
+@media only screen and (max-width: 991.8px) and (max-width: 767.8px) and (max-width: 575.8px) {
   .main__wrap-message {
+    max-width: 320px;
     padding: 0 17.6px 16px 26px
   }
 }
@@ -588,7 +619,7 @@ h6 {
   z-index: 100;
   width: 50%
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 991.8px) {
   .main__inner {
     width: 100%
   }
@@ -603,7 +634,7 @@ h6 {
   text-align: center;
   background-color: var(--background-color)
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 991.8px) {
   .main__subtitle {
     margin: 0 0 29px 0;
     padding: 0;
@@ -611,7 +642,7 @@ h6 {
     background-color: transparent
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767.8px) {
   .main__subtitle {
     max-width: 280px;
     margin: 0 auto 29px auto
@@ -620,7 +651,7 @@ h6 {
 .main__subtitle--block {
   display: block
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767.8px) {
   .main__subtitle--block {
     display: inline
   }
@@ -635,7 +666,6 @@ h6 {
 }
 .main__input {
   width: 100%;
-  max-width: 320px;
   height: 50px;
   margin: 0 0 20px 0;
   padding: 16px 20px 16px;
@@ -644,7 +674,7 @@ h6 {
   border: 1px solid var(--border-color);
   border-radius: 5px
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.8px) {
   .main__input {
     padding: 16px 11px 16px
   }
@@ -663,7 +693,7 @@ h6 {
   justify-content: space-between;
   margin: 0 0 38px
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.8px) {
   .main__wrap-input {
     margin: 0 0 28px
   }
@@ -672,7 +702,12 @@ h6 {
   width: 184px;
   margin: 0
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991.8px) {
+  .main__wrap-input .main__input {
+    width: 80%
+  }
+}
+@media only screen and (max-width: 991.8px) and (max-width: 575.8px) {
   .main__wrap-input .main__input {
     width: 174px
   }
@@ -690,7 +725,7 @@ h6 {
   border: 1px solid var(--border-color);
   border-radius: 5px
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767.8px) {
   .main__lang {
     width: 96px;
     padding: 16px 10px
@@ -710,7 +745,7 @@ h6 {
   transform: translateY(-50%);
   content: ''
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767.8px) {
   .main__lang::before {
     right: 5px
   }
@@ -746,7 +781,7 @@ h6 {
   visibility: visible;
   opacity: 1
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767.8px) {
   .main__btn {
     margin-bottom: 38px
   }
@@ -777,7 +812,7 @@ h6 {
   margin: 0 auto;
   background-color: var(--background-color)
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767.8px) {
   .main__Secure {
     display: flex
   }
