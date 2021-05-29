@@ -15,23 +15,37 @@
          </div>
 
          <div class="main__inner">
-            <h2 class="main__subtitle"><span class="main__subtitle--block">Сделай шаг</span> к выздоровлению</h2>
+            <h2 class="main__subtitle" data-key="subtitle"><span class="main__subtitle--block">Сделай шаг</span> к выздоровлению</h2>
 
             <div class="main__wrap-message">
 
-               <label class="main__label" for="inputName">Ваше <span class="main__label--green">имя</span></label>
+               <label class="main__label" for="inputName" data-key="labelName">Ваше <span class="main__label--green">имя</span></label>
                <input class="main__input" type="text" id="inputName" placeholder="Алексей">
 
 
-               <label class="main__label" for="inputTel">Ваш <span class="main__label--green">телефон</span></label>
+               <label class="main__label" for="inputTel" data-key="labelTel">Ваш <span class="main__label--green">телефон</span></label>
                <div class="main__wrap-input">
                   <input class="main__input tel" class="main__label" type="tel" id="inputTel"
                      placeholder="+7 (123) 456 78-90">
-                  <div class="main__lang"></div>
+
+                  <div class="main__wrap-lang">
+
+                     <button class="main__lang" id="ru" aria-label="открыть изменение языка">
+                        <strong class="main__lang-ru ru">RU</strong>
+                        <img class="main__lang-img ru" alt="lang ru" src="./../assets/images/main/ru.svg" />
+                     </button>
+
+                     <button class="main__accordion" id="ea" aria-hidden="true" aria-label="изменить язык english">
+                        <strong class="main__lang-ru ea">EA</strong>
+                        <img class="main__lang-img ea" alt="lang ea" src="./../assets/images/main/ru.svg" />
+                     </button>
+
+                  </div>
+
                </div>
 
 
-               <button class="btn">Заказать</button>
+               <button class="main__btn btn" data-key="btn"><span class="main__btn--arrow">Заказать</span></button>
 
                <div class="main__Secure">
                   <span class="main__Trusted text">Trusted</span>

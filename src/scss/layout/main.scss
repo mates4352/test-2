@@ -25,7 +25,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 40px 40px 35px 40px;
+      padding: 40px 40px 37px 40px;
       background: linear-gradient(180deg, #428a60 0%, #35734f 100%);
       border-radius: 1px;
 
@@ -37,6 +37,7 @@
 
       @include media(max,$md) {
          width: 100%;
+         max-width: 320px;
          height: 234px;
          padding: 40px 20px 0;
       }
@@ -148,17 +149,16 @@
    // .main__wrap-message
 
    &__wrap-message {
-      z-index: 100;
       width: 100%;
       max-width: 320px;
       margin: 0 auto;
-      padding: 48px 0 60px;
+      padding: 54px 0 60px;
 
       @include media(max,$md) {
          padding: 0 20px 40px 24px;
 
          @include media(max,$sm) {
-            padding: 0 17.6px 16px 24px;
+            padding: 0 17.6px 16px 26px;
          }
       }
    }
@@ -166,6 +166,7 @@
    // .main__inner
 
    &__inner {
+      z-index: 100;
       width: 50%;
 
       @include media(max,$xl) {
@@ -177,19 +178,21 @@
 
    &__subtitle {
       @include font(30px,1.2,800,center);
-      padding: 34px 0;
+      padding: 30px 0;
       color: var(--secondary-color);
       text-align: center;
       background-color: #f8f8f8;
 
       @include media(max,$xl) {
-         margin-bottom: 29px;
+         margin: 0 0 29px 0;
          padding: 0;
+         line-height: 1.27;
          background-color: transparent;
       }
 
       @include media(max,$md) {
-         background-color: transparent;
+         max-width: 280px;
+         margin: 0 auto 29px auto;
       }
    }
 
@@ -249,7 +252,7 @@
       margin: 0 0 38px;
 
       @include media(max,$sm) {
-         margin: 0 0 30px;
+         margin: 0 0 28px;
       }
 
       .main__input {
@@ -262,12 +265,108 @@
       }
    }
 
+   // .main__wrap-lang
+
+   &__wrap-lang {
+      position: relative;
+   }
+
    &__lang {
       @include wh(116px,50px);
-      border: 1px solid #000;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 16px 20px;
+      border: 1px solid #e4e4e4;
 
       @include media(max,$md) {
          width: 96px;
+         padding: 16px 10px;
+      }
+
+      &:focus,
+      &:hover {
+         background-color: rgba(153, 153, 153, 0.5);
+      }
+
+      &::before {
+         @include wh(8px,4px);
+         position: absolute;
+         top: 50%;
+         right: 20px;
+         background: url('./../assets/images/main/mark.svg') no-repeat center center/cover;
+         transform: translateY(-50%);
+         content: '';
+
+         @include media(max,$md) {
+            right: 5px;
+         }
+      }
+   }
+
+   // .main__lang-ru
+
+   &__lang-ru {
+      @include font(14px,1,600);
+      margin: 0 10px 0 0;
+      color: var(--secondary-color);
+   }
+
+   // .main__lang-img
+
+   // &__lang-img {
+
+   // }
+
+   // .main__accordion
+
+   &__accordion {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 16px 20px;
+      background-color: transparent;
+      border: 1px solid #e4e4e4;
+      visibility: hidden;
+      cursor: pointer;
+      opacity: 0;
+      transition: background-color 500ms ease, opacity 500ms ease, visibility 500ms ease;
+
+      &:focus,
+      &:hover {
+         background-color: rgba(153, 153, 153, 0.5);
+      }
+   }
+
+   &__accordion.active {
+      visibility: visible;
+      opacity: 1;
+   }
+
+   // .main__btn
+
+   &__btn {
+      @include media(max,$md) {
+         margin-bottom: 38px;
+      }
+   }
+
+   // .main__btn--arrow
+
+   &__btn--arrow {
+      position: relative;
+
+      &::before {
+         @include wh(15px,10px);
+         position: absolute;
+         top: 50%;
+         right: -26px;
+         background: url('./../assets/images/main/arrow.svg') no-repeat center center/cover;
+         transform: translateY(-50%);
+         content: '';
       }
    }
 
@@ -287,7 +386,7 @@
       margin: 0 auto;
       background-color: #f8f8f8;
 
-      @include media(max,$sm) {
+      @include media(max,$md) {
          display: flex;
       }
    }
